@@ -8,7 +8,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Green Valley Residence</title>
+<title>PT. Nedy Jaya Marison</title>
 
 <link rel="stylesheet"
 href="style.css">
@@ -27,6 +27,14 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 </head>
 
+<div class="lightbox" id="lightbox">
+
+    <span class="close-lightbox" onclick="closeImage()">&times;</span>
+
+    <img id="lightboxImage">
+
+</div>
+
 <body>
 
 <!-- Navbar -->
@@ -42,9 +50,9 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
 <li><a href="#">Home</a></li>
 
-<li><a href="#">Tentang</a></li>
+<li><a href="#tentang">Tentang</a></li>
 
-<li><a href="#">Tipe</a></li>
+<li><a href="#produk">Tipe</a></li>
 
 <li><a href="#">Gallery</a></li>
 
@@ -66,8 +74,8 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 Lingkungan Asri • Lokasi Strategis • Harga Terjangkau
 </p>
 
-<a href="#" class="btn">
-Lihat Tipe Rumah
+<a href="#produk" class="btn">
+    Lihat Tipe Rumah
 </a>
 
 </div>
@@ -182,9 +190,9 @@ Lihat Tipe Rumah
 
                 <div class="bottom">
 
-                    <a href="#">
-                        Detail →
-                    </a>
+                    <button class="detail-btn"
+    onclick="openVideo('video/bronze.mp4')">
+    Lihat Video →
 
                 </div>
 
@@ -223,9 +231,9 @@ Lihat Tipe Rumah
 
                 <div class="bottom">
 
-                    <a href="#">
-                        Detail →
-                    </a>
+                   <button class="detail-btn"
+    onclick="openVideo('video/silver.mp4')">
+    Lihat Video →
 
                 </div>
 
@@ -260,16 +268,16 @@ Lihat Tipe Rumah
 
                 <div class="bottom">
 
-                    <a href="#">
-                        Detail →
-                    </a>
+                    <button class="detail-btn"
+    onclick="openVideo('video/urban.mp4')">
+    Lihat Video →
 
                 </div>
 
             </div>
 
         </div>
-
+        
         <div class="property-card" data-aos="fade-up" data-aos-delay="300">
 
             <div class="property-image">
@@ -296,18 +304,15 @@ Lihat Tipe Rumah
                 </div>
 
                 <div class="bottom">
-
-                   
-
-                    <a href="#">
-                        Detail →
-                    </a>
-
+                    <button class="detail-btn"
+             onclick="openVideo('video/gold.mp4')">
+                Lihat Video →
                 </div>
 
             </div>
 
         </div>
+        
         <div class="property-card" data-aos="fade-up" data-aos-delay="300">
 
             <div class="property-image">
@@ -333,15 +338,17 @@ Lihat Tipe Rumah
 
                 <div class="bottom">
 
-                    <a href="#">
-                        Detail →
-                    </a>
+                    <button class="detail-btn"
+    onclick="openVideo('video/treetops.mp4')">
+    Lihat Video →
 
                 </div>
 
             </div>
 
         </div>
+
+        
         <div class="property-card" data-aos="fade-up" data-aos-delay="300">
 
             <div class="property-image">
@@ -383,12 +390,379 @@ Lihat Tipe Rumah
 
 </section>
 
+<section class="facility" id="fasilitas">
+
+    <div class="section-header" data-aos="fade-up">
+        
+        <h2>Fasilitas Lengkap untuk Kehidupan yang Lebih Nyaman</h2>
+        <p>
+            Nikmati berbagai fasilitas modern yang dirancang untuk memenuhi
+            kebutuhan seluruh anggota keluarga dalam satu kawasan hunian.
+        </p>
+    </div>
+
+    <div class="facility-grid">
+
+        <div class="facility-card" data-aos="zoom-in">
+            <i class="fa-solid fa-child-reaching"></i>
+            <h3>Taman Bermain Anak</h3>
+            <p>Area bermain yang aman dan nyaman untuk mendukung aktivitas dan tumbuh kembang anak.</p>
+        </div>
+
+        <div class="facility-card" data-aos="zoom-in" data-aos-delay="100">
+            <i class="fa-solid fa-person-swimming"></i>
+            <h3>Kolam Renang</h3>
+            <p>Kolam renang modern untuk rekreasi dan olahraga bersama keluarga.</p>
+        </div>
+
+        <div class="facility-card" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fa-solid fa-dumbbell"></i>
+            <h3>Fitness Center</h3>
+            <p>Fasilitas kebugaran lengkap untuk menunjang gaya hidup sehat setiap hari.</p>
+        </div>
+
+        <div class="facility-card" data-aos="zoom-in">
+            <i class="fa-solid fa-building"></i>
+            <h3>Gedung Serbaguna</h3>
+            <p>Dapat digunakan untuk berbagai kegiatan seperti pertemuan, acara keluarga, dan komunitas.</p>
+        </div>
+
+        <div class="facility-card" data-aos="zoom-in" data-aos-delay="100">
+            <i class="fa-solid fa-tree-city"></i>
+            <h3>Taman Tematik</h3>
+            <p>Ruang terbuka hijau dengan konsep modern yang memberikan suasana asri dan nyaman.</p>
+        </div>
+
+        <div class="facility-card" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fa-solid fa-school"></i>
+            <h3>Kawasan Pendidikan</h3>
+            <p>Tersedia fasilitas pendidikan mulai dari TK, SD, SMP, SMA hingga Universitas.</p>
+        </div>
+
+        <div class="facility-card" data-aos="zoom-in">
+            <i class="fa-solid fa-hospital"></i>
+            <h3>Rumah Sakit</h3>
+            <p>Akses layanan kesehatan yang dekat dan siap melayani kebutuhan penghuni setiap saat.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="masterplan" id="masterplan">
+ <span class="section-tag">
+    Masterplan Park Serpong
+</span>
+    <div class="masterplan-image" data-aos="fade-right">
+
+        <img src="images/masterplan.jpg" alt="Masterplan Perumahan">
+
+    </div>
+
+    <div class="masterplan-content" data-aos="fade-left">
+
+      
+
+<h2>
+    Kawasan Hunian Modern
+    <br>
+    yang Dirancang untuk Masa Depan
+</h2>
+
+<p>
+    Setiap sudut kawasan dirancang dengan konsep kota mandiri yang
+    mengutamakan kenyamanan, keamanan, aksesibilitas, dan ruang hijau
+    sehingga menjadi lingkungan ideal bagi keluarga modern.
+</p>
+
+<div class="master-feature">
+
+    <div class="feature-item">
+        <i class="fa-solid fa-school"></i>
+        <span>Education</span>
+    </div>
+
+    <div class="feature-item">
+        <i class="fa-solid fa-hospital"></i>
+        <span>Healthcare</span>
+    </div>
+
+    <div class="feature-item">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Shopping Centre</span>
+    </div>
+
+    <div class="feature-item">
+        <i class="fa-solid fa-dumbbell"></i>
+        <span>Sport Center</span>
+    </div>
+
+    <div class="feature-item">
+        <i class="fa-solid fa-hotel"></i>
+        <span>Hotel</span>
+    </div>
+    <div class="feature-item">
+        <i class="fa-solid fa-train-subway"></i>
+        <span>Transport Hub</span>
+    </div>
+
+</div>
+
+
+<a href="pdf/serpong.pdf"
+   target="_blank"
+   class="btn-master">
+
+    <i class="fa-solid fa-file-pdf"></i>
+    Lihat Selengkapnya
+
+</a>
+
+
+</section>
+<section class="masterplan" id="masterplan">
+ <span class="section-tag">
+     Designer Park Serpong 
+</span>
+    <div class="masterplan-image" data-aos="fade-right">
+
+        <img src="images/designserpong.jpg" alt="Masterplan Perumahan">
+
+    </div>
+
+    <div class="masterplan-content" data-aos="fade-left">
+
+      
+
+<h2>
+    Mewujudkan Lingkungan Hunian yang Nyaman dan Berkelanjutan
+    <br>
+    
+</h2>
+
+<p>
+    Menghadirkan kawasan yang memadukan desain modern, infrastruktur berkualitas, ruang terbuka hijau, serta sistem keamanan yang mendukung kenyamanan dan ketenangan setiap penghuni.
+</p>
+
+<div class="master-feature">
+
+    <div class="feature-item">
+        <i class="fa-solid fa-school"></i>
+        <span>Education</span>
+    </div>
+
+    <div class="feature-item">
+        <i class="fa-solid fa-hospital"></i>
+        <span>Healthcare</span>
+    </div>
+
+    <div class="feature-item">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Shopping Centre</span>
+    </div>
+
+    <div class="feature-item">
+        <i class="fa-solid fa-dumbbell"></i>
+        <span>Sport Center</span>
+    </div>
+
+    <div class="feature-item">
+        <i class="fa-solid fa-hotel"></i>
+        <span>Hotel</span>
+    </div>
+    <div class="feature-item">
+        <i class="fa-solid fa-train-subway"></i>
+        <span>Transport Hub</span>
+    </div>
+
+</div>
+
+
+<a href="pdf/infinite.pdf"
+   target="_blank"
+   class="btn-master">
+
+    <i class="fa-solid fa-file-pdf"></i>
+    Lihat Selengkapnya
+
+</a>
+
+</section>
+
+<!-- ===========================
+     GALERI
+============================ -->
+<section class="gallery" id="gallery">
+
+    <div class="section-title">
+
+        <span>Galeri Kawasan</span>
+
+        <h2>Keindahan Hunian Modern Kami</h2>
+
+        <p>
+            Jelajahi suasana kawasan, rumah contoh, fasilitas, dan lingkungan
+            yang dirancang untuk memberikan kenyamanan bagi keluarga Anda.
+        </p>
+
+    </div>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item large">
+            <img src="images/hero1.jpg" alt="" onclick="openImage(this.src)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/galeri1.jpg" alt="" onclick="openImage(this.src)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/galeri2.jpg" alt="" onclick="openImage(this.src)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/galeri3.jpg" alt="" onclick="openImage(this.src)">
+        </div>
+
+        <div class="gallery-item large">
+            <img src="images/galeri4.jpg" alt="" onclick="openImage(this.src)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/galeri5.jpg" alt="" onclick="openImage(this.src)">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        LOKASI
+========================== -->
+
+<section class="location" id="lokasi">
+
+    <div class="location-content" data-aos="fade-right">
+
+        <span>Lokasi Strategis</span>
+
+        <h2>
+            Akses Mudah Menuju
+            Berbagai Fasilitas Umum
+        </h2>
+
+        
+
+        <div class="location-list">
+
+            <div class="location-item">
+                <!-- <i class="fa-solid fa-location"></i> -->
+                <div>
+                    <h4>Alamat Office</h4>
+                    <p>Jl. Raya Cijengir, RT/RW : 002/03, Kel.Binong, Kec. Curug, Kab. Tangerang, Prov. Banten</p>
+                </div>
+            </div>
+
+            <!-- <div class="location-item">
+                <i class="fa-solid fa-school"></i>
+                <div>
+                    <h4>3 Menit</h4>
+                    <p>Sekolah</p>
+                </div>
+            </div>
+
+            <div class="location-item">
+                <i class="fa-solid fa-hospital"></i>
+                <div>
+                    <h4>8 Menit</h4>
+                    <p>Rumah Sakit</p>
+                </div>
+            </div>
+
+            <div class="location-item">
+                <i class="fa-solid fa-store"></i>
+                <div>
+                    <h4>10 Menit</h4>
+                    <p>Pusat Perbelanjaan</p>
+                </div>
+            </div>
+
+        </div>
+
+        <a href="https://maps.google.com"
+           target="_blank"
+           class="btn-location">
+
+            <i class="fa-solid fa-location-dot"></i>
+            Buka Google Maps
+
+        </a>
+
+    </div>
+
+    <div class="location-map" data-aos="fade-left">
+
+        <!-- Ganti link embed sesuai lokasi -->
+        <!-- <iframe
+            src="https://www.google.com/maps/embed?pb="
+            allowfullscreen=""
+            loading="lazy">
+        </iframe> --> 
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        CTA
+========================== -->
+
+<section class="cta">
+
+    <div class="cta-overlay">
+
+        <span>PT. NEDY JAYA MARISON</span>
+
+        <h2>
+            Wujudkan Rumah Impian Anda Bersama Kami
+        </h2>
+
+        <p>
+            Dapatkan informasi lengkap mengenai tipe rumah, harga,
+            promo terbaru, dan jadwalkan kunjungan lokasi bersama
+            tim marketing kami.
+        </p>
+
+        <div class="cta-button">
+
+            <a href="https://wa.me/6282178777573" target="_blank" class="btn-wa">
+
+                <i class="fa-brands fa-whatsapp"></i>
+                Hubungi Marketing
+
+            </a>
+
+            <a href="pdf/serpong.pdf" target="_blank" class="btn-brosur">
+
+                <i class="fa-solid fa-file-pdf"></i>
+                Download Brosur
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script src="script.js"></script>
+
+
 
 
 <!-- Video Modal -->
@@ -403,6 +777,76 @@ Lihat Tipe Rumah
     </div>
 
 </div>
+
+<!-- ==========================
+        FOOTER
+========================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- Company -->
+        <div class="footer-box">
+
+            <img src="images/logo_njm.png" alt="Logo" class="footer-logo">
+
+            <h3>PT. NEDY JAYA MARISON</h3>
+
+            <p>
+                Developer properti terpercaya yang menghadirkan hunian modern,
+                nyaman, aman, dan berkualitas untuk keluarga Indonesia.
+            </p>
+
+        </div>
+
+       
+
+        
+
+        <!-- Contact -->
+        <div class="footer-box">
+
+            <h4>Hubungi Kami</h4>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                Tangerang, Banten
+            </p>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                0821-7877-7573
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                pahriwand25@gmail.com
+            </p>
+
+            <div class="social">
+
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        © 2026 PT. NEDY JAYA MARISON. All Rights Reserved.
+
+    </div>
+
+</footer>
 
 </body>
 
