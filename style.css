@@ -83,22 +83,27 @@ nav ul li a:hover{
     color:#C59D5F;
 }
 
+
+
 /* ==========================
 Hero
 ========================== */
 
 .hero{
     position: relative;
-    height: 100vh;
-    background: url("/images/hero2.jpg") center center/cover no-repeat;
+    min-height: 100vh;
+    background: url("images/hero2.jpg") center center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
 }
 
 .hero::before{
     content: "";
     position: absolute;
-    inset: 0; /* sama dengan top:0; right:0; bottom:0; left:0 */
-    background: rgba(0,0,0,0.55);
+    inset: 0;
+    background: rgba(0,0,0,.55);
     z-index: 1;
 }
 
@@ -106,43 +111,105 @@ Hero
     position: relative;
     z-index: 2;
     width: 100%;
-    height: 100%;
+    max-width: 1200px;
+    padding: 120px 20px 80px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     text-align: center;
-    color: white;
+    color: #fff;
 }
 
 .overlay h1{
-    font-size:65px;
-    font-weight:700;
-    max-width:850px;
-    line-height:1.2;
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 850px;
 }
 
 .overlay p{
-    margin-top:20px;
-    font-size:20px;
-    color:white;
+    margin-top: 20px;
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 700px;
 }
 
 .btn{
-    margin-top:40px;
-    display:inline-block;
-    background:#0E5E4A;
-    color:white;
-    text-decoration:none;
-    padding:15px 40px;
-    border-radius:50px;
-    transition:.3s;
-    font-weight:600;
+    margin-top: 35px;
+    display: inline-block;
+    padding: 16px 38px;
+    background: #0E5E4A;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: .3s;
 }
 
 .btn:hover{
-    background:#C59D5F;
-    transform:translateY(-4px);
+    background: #C59D5F;
+    transform: translateY(-4px);
+}
+
+@media (max-width:768px){
+
+    nav{
+        padding:15px 20px;
+    }
+
+    .logo img{
+        width:50px;
+        height:50px;
+    }
+
+    .logo span{
+        top:-8px;
+        font-size:13px;
+    }
+
+    .hero{
+        min-height:100vh;
+    }
+
+    .overlay{
+        padding:110px 20px 60px;
+    }
+
+    .overlay h1{
+        font-size:34px;
+        line-height:1.3;
+    }
+
+    .overlay p{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .btn{
+        padding:14px 30px;
+        font-size:15px;
+        margin-top:25px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .overlay h1{
+        font-size:28px;
+    }
+
+    .overlay p{
+        font-size:15px;
+    }
+
+    .btn{
+        width:100%;
+        max-width:280px;
+        text-align:center;
+    }
+
 }
 
 /* ==========================
