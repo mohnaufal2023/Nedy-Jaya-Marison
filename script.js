@@ -3,8 +3,8 @@
 // ===============================
 
 AOS.init({
-    duration: 1000,
-    once: true
+  duration: 1000,
+  once: true,
 });
 
 // ===============================
@@ -12,17 +12,17 @@ AOS.init({
 // ===============================
 
 const swiper = new Swiper(".swiper", {
-    loop: true,
+  loop: true,
 
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false
-    },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
 
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-    }
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 });
 
 // ===============================
@@ -30,46 +30,50 @@ const swiper = new Swiper(".swiper", {
 // ===============================
 
 document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("videoModal");
+  const video = document.getElementById("houseVideo");
 
-    const modal = document.getElementById("videoModal");
-    const video = document.getElementById("houseVideo");
+  function openVideo(videoSrc) {
+    modal.classList.add("active");
 
-    function openVideo(videoSrc) {
+    video.src = videoSrc;
 
-        modal.classList.add("active");
+    video.load();
 
-        video.src = videoSrc;
+    video.play();
+  }
 
-        video.load();
+  function closeVideo() {
+    modal.classList.remove("active");
 
-        video.play();
+    video.pause();
 
+    video.currentTime = 0;
+
+    video.src = "";
+  }
+
+  // supaya bisa dipanggil dari HTML onclick
+  window.openVideo = openVideo;
+  window.closeVideo = closeVideo;
+
+  // klik area hitam untuk menutup
+  modal.addEventListener("click", function (e) {
+    if (e.target === modal) {
+      closeVideo();
     }
-
-    function closeVideo() {
-
-        modal.classList.remove("active");
-
-        video.pause();
-
-        video.currentTime = 0;
-
-        video.src = "";
-
-    }
-
-    // supaya bisa dipanggil dari HTML onclick
-    window.openVideo = openVideo;
-    window.closeVideo = closeVideo;
-
-    // klik area hitam untuk menutup
-    modal.addEventListener("click", function (e) {
-
-        if (e.target === modal) {
-            closeVideo();
-        }
-
-    });
-
+  });
 });
 
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+
+    if(navMenu.classList.contains("active")){
+        menuToggle.innerHTML = "✕";
+    }else{
+        menuToggle.innerHTML = "☰";
+    }
+});

@@ -21,35 +21,31 @@ body{
 }
 
 /* ==========================
-Navbar
+   NAVBAR
 ========================== */
 
 nav{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    transition:.4s;
-    z-index:999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .4s;
+    z-index: 9999;
 }
 
 nav.scrolled{
-    background:white;
-    box-shadow:0 5px 20px rgba(0,0,0,.08);
-    padding:15px 8%;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,.08);
 }
 
-.logo span{
-    font-size: 15px;
-    font-weight: 700;
-    color: rgb(253, 253, 253);
-    position: relative;
-    top: -20px; /* Geser teks ke atas */
-    transition: .4s;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
 .logo img{
@@ -58,29 +54,90 @@ nav.scrolled{
     object-fit:contain;
 }
 
-nav.scrolled .logo{
+.logo span{
+    color:#fff;
+    font-size:15px;
+    font-weight:700;
+}
+
+nav.scrolled .logo span{
     color:#0E5E4A;
 }
 
-nav ul{
+/* ==========================
+   NAVBAR
+========================== */
+
+nav{
     display:flex;
-    list-style:none;
-    gap:35px;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 80px;
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    z-index:1000;
 }
 
-nav ul li a{
-    color:white;
+/* Menu */
+#nav-menu{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+#nav-menu li a{
     text-decoration:none;
+    color:#fff;
     font-weight:500;
     transition:.3s;
 }
 
-nav.scrolled ul li a{
-    color:#222;
+#nav-menu li a:hover{
+    color:#0E5E4A;
 }
 
-nav ul li a:hover{
-    color:#C59D5F;
+/* Hamburger */
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    color:#fff;
+    cursor:pointer;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    #nav-menu{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#0f1b2a;
+        flex-direction:column;
+        align-items:center;
+        overflow:hidden;
+
+        max-height:0;
+        transition:.4s ease;
+    }
+
+    #nav-menu.active{
+        max-height:400px;
+        padding:20px 0;
+    }
+
+    #nav-menu li{
+        margin:12px 0;
+    }
 }
 
 
