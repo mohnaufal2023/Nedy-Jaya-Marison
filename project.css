@@ -92,7 +92,7 @@ HERO
 
     height:100vh;
 
-    background:url("../images/park-serpong-hero.jpg") center center/cover no-repeat;
+    background:url("../images/masterplan.jpg") center center/cover no-repeat;
 
     position:relative;
 
@@ -268,6 +268,261 @@ HERO
         width:100%;
 
         text-align:center;
+
+    }
+
+}
+
+
+
+/*==========================
+        HOUSE TYPE
+==========================*/
+
+.house-type{
+
+    padding:100px 8%;
+    background:#f8f9fb;
+
+}
+
+.house-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:35px;
+
+}
+
+.house-card{
+
+    background:#fff;
+    border-radius:25px;
+    overflow:hidden;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.house-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 45px rgba(0,0,0,.15);
+
+}
+
+.house-image{
+    width:100%;
+    height:700px;
+    overflow:hidden;
+    border-radius:20px 20px 0 0;
+}
+
+.house-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+.house-card:hover .house-image img{
+    transform:scale(1.08);
+}
+
+.status{
+
+    position:absolute;
+
+    top:20px;
+    left:20px;
+
+    background:#0E5E4A;
+
+    color:white;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+}
+
+.premium{
+
+    background:#C59D5F;
+
+}
+
+.house-content{
+
+    padding:30px;
+
+}
+
+.house-content h3{
+
+    color:#0E5E4A;
+
+    margin-bottom:20px;
+
+    font-size:28px;
+
+}
+
+.spec{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:15px;
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+.house-content h4{
+
+    color:#0E5E4A;
+
+    margin:25px 0;
+
+    font-size:24px;
+
+}
+
+.house-btn{
+
+    width:100%;
+
+    border:none;
+
+    background:#0E5E4A;
+
+    color:white;
+
+    padding:16px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.house-btn:hover{
+
+    background:#C59D5F;
+
+    transform:translateY(-3px);
+
+}
+
+/*==========================
+      VIDEO MODAL
+==========================*/
+
+.video-modal{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.85);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s;
+
+    z-index:9999;
+
+}
+
+.video-modal.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.video-box{
+
+    position:relative;
+
+    width:85%;
+
+    max-width:950px;
+
+    background:#000;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.video-box video{
+
+    width:100%;
+
+    display:block;
+
+}
+
+.close-video{
+
+    position:absolute;
+
+    top:15px;
+
+    right:20px;
+
+    font-size:40px;
+
+    color:white;
+
+    cursor:pointer;
+
+    z-index:10;
+
+}
+
+@media(max-width:768px){
+
+    .house-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .video-box{
+
+        width:95%;
 
     }
 

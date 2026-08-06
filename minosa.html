@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aryana | PT. Nedy Jaya Marison</title>
+
+    <link rel="icon" href="images/logo_njm.png">
+
+    <link rel="stylesheet" href="minosa.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+</head>
+    
+<body>
+
+<!-- ==========================
+NAVBAR
+========================== -->
+
+<nav>
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img src="images/logo_njm.png" alt="Logo">
+
+        </a>
+
+    </div>
+
+    <ul>
+
+        <li><a href="#tentang">Tentang</a></li>
+
+        <li><a href="#keunggulan">Keunggulan</a></li>
+
+        <li><a href="#tipe">Tipe Rumah</a></li>
+
+        <li><a href="#gallery">Gallery</a></li>
+
+        <li><a href="#lokasi">Lokasi</a></li>
+
+    </ul>
+
+</nav>
+
+
+<!-- ==========================
+HERO
+========================== -->
+
+<section class="hero">
+
+    <div class="overlay">
+
+        <span>PROJECT UNGGULAN</span>
+
+        <h1>Mimosa</h1>
+
+        <p>
+
+            Hunian Modern Bernilai Investasi Tinggi
+            dengan lingkungan hijau, fasilitas lengkap,
+            dan akses strategis.
+
+        </p>
+
+        <div class="hero-button">
+
+            <a href="#tipe" class="btn-primary">
+
+                Lihat Tipe Rumah
+
+            </a>
+
+            <!-- <a href="#lokasi" class="btn-secondary">
+
+                Lihat Lokasi
+
+            </a> -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================
+     TIPE RUMAH
+========================== -->
+
+<section class="house-type" id="tipe">
+
+    <div class="section-title">
+
+        <span>Tipe Rumah</span>
+
+        <h2>Pilih Hunian Impian Anda</h2>
+
+        <p>
+            Temukan tipe rumah yang sesuai dengan kebutuhan keluarga Anda.
+        </p>
+
+    </div>
+
+    <div class="house-grid">
+
+        <!-- CARD 1 -->
+        <div class="house-card">
+
+            <div class="house-image">
+
+                <img src="images/minosa.jpg" alt="Tipe 45">
+
+                
+
+            </div>
+
+            <div class="house-content">
+
+                <h3>Mimosa</h3>
+
+                <div class="spec">
+                    <span>Rumah praktis, nyaman, dan cocok untuk keluarga muda.</span>
+                </div>
+
+                <!-- <div class="spec">
+                    <span>📐 LT 31,5 m²</span>
+                    <span>🏠 LB 27,6 m²</span>
+                </div> -->
+
+                
+
+                <button
+                    class="house-btn"
+                    onclick="openVideo('video/Mimosa1.mp4')">
+
+                    ▶ Lihat Video
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="house-card">
+
+            <div class="house-image">
+
+                <img src="images/minosa.jpg" alt="Tipe 60">
+
+            </div>
+
+            <div class="house-content">
+
+                <h3>Mimosa</h3>
+
+                <div class="spec">
+                    <span>Hunian stylish dengan tata ruang fungsional dan modern.</span>
+                    
+                </div>
+
+                <!-- <div class="spec">
+                    <span>📐 LT 34,7 m²</span>
+                    <span>🏠 LB 44,2 m²</span>
+                </div> -->
+
+                
+
+                <button
+                    class="house-btn"
+                    onclick="openVideo('video/Mimosa2.mp4')">
+
+                    ▶ Lihat Video
+
+                </button>
+
+            </div>
+
+        </div>
+        <div class="house-card">
+
+            <div class="house-image">
+
+                <img src="images/minosa.jpg" alt="Tipe 60">
+
+            </div>
+
+            <div class="house-content">
+
+                <h3>Mimosa</h3>
+
+                <div class="spec">
+                    <span>Desain minimalis modern untuk gaya hidup perkotaan aktif.</span>
+                </div>
+
+                <!-- <div class="spec">
+                    <span>📐 LT 41,3 m²</span>
+                    <span>🏠 LB 60,8 m²</span>
+                </div> -->
+
+               
+
+                <button
+                    class="house-btn"
+                    onclick="openVideo('video/Mimosa3.mp4')">
+
+                    ▶ Lihat Video
+
+                </button>
+
+            </div>
+
+        </div>
+        
+
+</section>
+
+<!-- ==========================
+     VIDEO MODAL
+========================== -->
+
+<div class="video-modal" id="videoModal">
+
+    <div class="video-box">
+
+        <span class="close-video"
+        onclick="closeVideo()">
+
+            &times;
+
+        </span>
+
+        <video
+            id="houseVideo"
+            controls
+            controlsList="nodownload">
+
+        </video>
+
+    </div>
+
+</div>
+
+<!-- ==========================
+AOS
+========================== -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<!-- ==========================
+SWIPER
+========================== -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- ==========================
+JAVASCRIPT
+========================== -->
+<script src="script.js"></script>
+
+</body>
+</html>
+</body>
+</html>

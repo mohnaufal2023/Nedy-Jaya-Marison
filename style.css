@@ -1765,6 +1765,75 @@ height:350px;
     color:white;
 
 }
+
+/* ==========================
+   LEGALITAS
+========================== */
+
+.legalitas{
+    padding:100px 8%;
+    background:#fff;
+}
+
+.legal-card{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    margin-top:60px;
+}
+
+.legal-image{
+    flex:1;
+}
+
+.legal-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.legal-content{
+    flex:1;
+}
+
+.legal-content h3{
+    color:#0E5E4A;
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.legal-content p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.legal-content ul{
+    list-style:none;
+}
+
+.legal-content li{
+    margin-bottom:15px;
+    font-size:17px;
+    color:#333;
+}
+
+@media(max-width:768px){
+
+    .legal-card{
+        flex-direction:column;
+    }
+
+    .legal-content{
+        text-align:center;
+    }
+
+    .legal-content ul{
+        text-align:left;
+        display:inline-block;
+    }
+
+}
 /*==========================
           FOOTER
 ==========================*/
